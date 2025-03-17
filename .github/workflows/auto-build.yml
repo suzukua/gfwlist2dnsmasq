@@ -35,7 +35,9 @@ jobs:
       - name: build gfwlist
         run: |
           date '+%F %T'
+          echo "开始执行 sh gfwlist2dnsmasq_lite.sh gen"
           sh gfwlist2dnsmasq_lite.sh gen
+          echo "开始执行 sh gfwlist2dnsmasq.sh gen"
           sh gfwlist2dnsmasq.sh gen
 
       # Runs a set of commands using the runners shell
