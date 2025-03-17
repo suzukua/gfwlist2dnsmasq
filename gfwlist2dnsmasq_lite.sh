@@ -50,7 +50,9 @@ gen(){
         fi
           # 下载每个URL的内容并追加到文件
         curl "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml" >> "$GFW_TMP"
+	echo "\n" >> "$GFW_TMP"
         curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list" >> "$GFW_TMP"
+	echo "\n" >> "$GFW_TMP"
 	curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/TikTok/TikTok.list" >> "$GFW_TMP"
         echo "下载完成，所有内容已合并到 $GFW_TMP"
 	cat $GFW_TMP |wc -l
