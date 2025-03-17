@@ -12,8 +12,8 @@ MYDNSPORT=${3:-23453}
 IPSETNAME=${4:-dnsmasq_gfw}
 IPSETNAME6=${5:-dnsmasq_gfw6}
 
-GFWURL="https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
-#GFWURL="https://raw.githubusercontent.com/hezhijie0327/GFWList2AGH/main/gfwlist2domain/blacklist_lite.txt"
+# GFWURL="https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
+GFWURL="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ProxyGFWlist.yaml"
 #GFWURL="https://raw.githubusercontent.com/hezhijie0327/GFWList2AGH/main/gfwlist2domain/blacklist_full.txt"
 
 GFW_TMP="/tmp/gfw.txt"
@@ -53,9 +53,9 @@ gen(){
           rm "$GFW_TMP"
         fi
           # 下载每个URL的内容并追加到文件
-        curl "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt" >> "$GFW_TMP"
-        curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list" >> "$GFW_TMP"
-	curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/TikTok/TikTok.list" >> "$GFW_TMP"
+ #        curl "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt" >> "$GFW_TMP"
+ #        curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list" >> "$GFW_TMP"
+	# curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/TikTok/TikTok.list" >> "$GFW_TMP"
         echo "下载完成，所有内容已合并到 $output_file"
 	addDomain
 	# parse gfwlist	
