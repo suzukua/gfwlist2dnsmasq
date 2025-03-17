@@ -57,6 +57,7 @@ gen(){
  #        curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list" >> "$GFW_TMP"
 	# curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/TikTok/TikTok.list" >> "$GFW_TMP"
         echo "下载完成，所有内容已合并到 $GFW_TMP"
+	cat $GFW_TMP |wc -l
 	addDomain
 	# parse gfwlist	
 	cat $GFW_TMP \
