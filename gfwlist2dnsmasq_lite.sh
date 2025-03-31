@@ -27,7 +27,7 @@ c_conf() {
 		if [ "$(filter "$LINE")" -eq "0" ]; then
       			printf 'server=/.%s/%s#%s\n' $LINE $MYDNSIP $MYDNSPORT >> $GFWLIST_TMP
  			# printf 'ipset=/.%s/%s,%s\n' $LINE $IPSETNAME $IPSETNAME6 >> $GFWLIST_TMP
-    			printf 'ipset=/.%s/%s,%s\n' $LINE $IPSETNAME >> $GFWLIST_TMP
+    			printf 'ipset=/.%s/%s\n' $LINE $IPSETNAME >> $GFWLIST_TMP
   		fi
 	done
 }
