@@ -39,7 +39,7 @@ filter(){
 }
 
 addDomain(){
-	echo "fast.com\nsydney.bing.com\nrclone.org\nspeed.cloudflare.com\ndocker.com\ndocker.io\nomdbapi.com\nmetacubex.one\nooklaserver.net\ndash.cloudflare.com\nip.sb\nnodeseek.com\nthemoviedb.org" >> $GFW_TMP
+	echo "fast.com\nsydney.bing.com\nrclone.org\nspeed.cloudflare.com\ndocker.com\ndocker.io\nomdbapi.com\nmetacubex.one\nooklaserver.net\ndash.cloudflare.com\nip.sb\nnodeseek.com\nthemoviedb.org\nserv00.com" >> $GFW_TMP
 }
 
 gen(){
