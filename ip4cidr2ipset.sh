@@ -14,7 +14,9 @@ add_telegram(){
   curl -s -k -o $downloadFile https://core.telegram.org/resources/cidr.txt
   echo "\n" >> $downloadFile
   curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list" >> $downloadFile
+  sed -i '/^[[:space:]]*#/d' $downloadFile
   sed -i "s/payload://g;s/  - //g;s/'//g;/^\s*$/d" $downloadFile
+  awk -F',' '{print ($2=="") ? $1 : $2}' "$downloadFile" > tmp && mv tmp "$downloadFile"
   lines=$(cat $downloadFile | awk '{print $0}')
   for line in $lines
   do
