@@ -45,12 +45,12 @@ addDomain(){
 gen(){
 	echo "开始下载GFW规则，过程可能较慢，请耐心等待"
 	# download
-        # 检查文件是否存在，如果存在则删除
-        if [ -f "$GFW_TMP" ]; then
-          rm "$GFW_TMP"
-        fi
-          # 下载每个URL的内容并追加到文件
-        curl "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml" >> "$GFW_TMP"
+	# 检查文件是否存在，如果存在则删除
+	if [ -f "$GFW_TMP" ]; then
+	  rm "$GFW_TMP"
+	fi
+	  # 下载每个URL的内容并追加到文件
+	curl "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml" >> "$GFW_TMP"
 	echo "\n" >> "$GFW_TMP"
 	curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Copilot/Copilot.list" >> "$GFW_TMP"
 	echo "\n" >> "$GFW_TMP"
