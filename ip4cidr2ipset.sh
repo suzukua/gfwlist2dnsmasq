@@ -6,13 +6,16 @@ IPSETNAME6="gfw_cidr6"
 echo "# Updated on:$(date '+%F %T')" >$cidrfile
 echo "create $IPSETNAME hash:net family inet hashsize 1024 maxelem 65536" >> $cidrfile
 echo "create $IPSETNAME6 hash:net family inet6 hashsize 1024 maxelem 65536" >> $cidrfile
+downloadFile="/home/runner/work/publish/downloadfile.txt"
 
 #开始添加需要走代理的ip-cidr
 add_telegram(){
   echo 开始添加telegram ip-cidr
-  curl -s -k -o /home/runner/work/publish/telegramcidr.txt https://core.telegram.org/resources/cidr.txt
-  sed -i "s/payload://g;s/  - //g;s/'//g;/^\s*$/d" /home/runner/work/publish/telegramcidr.txt
-  lines=$(cat /home/runner/work/publish/telegramcidr.txt | awk '{print $0}')
+  curl -s -k -o $downloadFile https://core.telegram.org/resources/cidr.txt
+  echo "\n" >> $downloadFile
+  curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list" >> $downloadFile
+  sed -i "s/payload://g;s/  - //g;s/'//g;/^\s*$/d" $downloadFile
+  lines=$(cat $downloadFile | awk '{print $0}')
   for line in $lines
   do
     detect_ip ${line}
