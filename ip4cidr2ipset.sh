@@ -11,7 +11,7 @@ downloadFile="/home/runner/work/publish/downloadfile.txt"
 #开始添加需要走代理的ip-cidr
 add_telegram(){
   echo 开始添加telegram ip-cidr
-  curl -s -k -o $downloadFile https://core.telegram.org/resources/cidr.txt
+  curl -s -k -o $downloadFile "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Telegram/Telegram.list"
   echo "\n" >> $downloadFile
   curl "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list" >> $downloadFile
   sed -i '/^[[:space:]]*#/d' $downloadFile
