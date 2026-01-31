@@ -1,0 +1,55 @@
+# Rows:51
+# Updated on:2026-02-01 04:26:40
+create gfw_cidr hash:net family inet hashsize 1024 maxelem 65536
+create gfw_cidr6 hash:net family inet6 hashsize 1024 maxelem 65536
+add gfw_cidr 109.239.140.0/24
+add gfw_cidr 139.59.210.98/32
+add gfw_cidr 149.154.160.0/20
+add gfw_cidr 196.55.216.167/32
+add gfw_cidr 5.28.192.0/18
+add gfw_cidr 91.108.0.0/16
+add gfw_cidr6 2001:67c:4e8::/48
+add gfw_cidr6 2001:b28:f23c::/47
+add gfw_cidr6 2001:b28:f23f::/48
+add gfw_cidr6 2a0a:f280::/29
+add gfw_cidr 101.124.19.122/32
+add gfw_cidr 101.91.140.124/32
+add gfw_cidr 101.91.140.224/32
+add gfw_cidr 103.224.222.208/32
+add gfw_cidr 112.64.218.119/32
+add gfw_cidr 112.65.200.117/32
+add gfw_cidr 114.116.215.110/32
+add gfw_cidr 115.236.121.195/32
+add gfw_cidr 115.236.121.51/32
+add gfw_cidr 116.63.10.135/32
+add gfw_cidr 116.63.10.31/32
+add gfw_cidr 117.144.238.29/32
+add gfw_cidr 117.185.228.108/32
+add gfw_cidr 118.89.204.198/32
+add gfw_cidr 119.29.29.98/31
+add gfw_cidr 120.46.169.234/32
+add gfw_cidr 121.36.72.124/32
+add gfw_cidr 122.9.13.79/32
+add gfw_cidr 122.9.15.129/32
+add gfw_cidr 122.9.7.134/32
+add gfw_cidr 123.151.54.50/32
+add gfw_cidr 180.76.76.200/32
+add gfw_cidr 182.254.116.117/32
+add gfw_cidr 182.254.118.119/32
+add gfw_cidr 202.90.108.13/32
+add gfw_cidr 202.90.110.46/32
+add gfw_cidr 203.107.1.0/24
+add gfw_cidr 39.97.128.148/32
+add gfw_cidr 39.97.130.51/32
+add gfw_cidr 42.187.182.106/32
+add gfw_cidr 42.187.182.123/32
+add gfw_cidr 42.187.184.154/32
+add gfw_cidr 42.81.232.18/32
+add gfw_cidr 47.100.123.169/32
+add gfw_cidr 47.101.175.206/32
+add gfw_cidr 59.111.239.61/32
+add gfw_cidr 59.111.239.62/32
+add gfw_cidr6 2402:4e00:1200:ed00:0:9089:6dac:96b6/128
+add gfw_cidr6 2402:4e00:1900:1700:0:9554:1ad9:c3a/128
+add gfw_cidr6 2402:db40:5100:1011::5/128
+add gfw_cidr6 240e:928:1400:10::25/128
